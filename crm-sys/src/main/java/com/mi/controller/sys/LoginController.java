@@ -6,16 +6,38 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.mi.util.VerifyCodeUtils;
+
+import io.swagger.annotations.ApiOperation;
 
 @Controller
-@RequestMapping("/login")
 public class LoginController {
 
-	@GetMapping("")
+	@GetMapping("/login")
 	public String login() {
-		return "/login";
+		return "login";
 	}
+	
+	@GetMapping("/tab")
+	public String tab() {
+		return "main/tab";
+	}
+	
+	/**
+     * 登录动作
+     *
+     * @param user
+     * @param model
+     * @param rememberMe
+     * @return
+     */
+    @ApiOperation(value = "/login", httpMethod = "POST", notes = "登录method")
+    @PostMapping(value = "/login")
+    public String login(HttpServletRequest request) {
+         return "main/main";
+    }
 	
 	@GetMapping(value = "/getCode")
     public void getCode(HttpServletResponse response, HttpServletRequest request) {

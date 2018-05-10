@@ -19,7 +19,6 @@ public class FreeMarkerConfig{
     FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
     resolver.setCache(false);
     resolver.setViewClass(org.springframework.web.servlet.view.freemarker.FreeMarkerView.class);
-    resolver.setRequestContextAttribute("mi");
     resolver.setExposeRequestAttributes(true);
     resolver.setExposeSessionAttributes(true);
     resolver.setSuffix(".ftl");

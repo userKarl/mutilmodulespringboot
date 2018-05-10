@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-	<link rel="stylesheet" href="/plugin/layui/css/layui.css" media="all">
-    <link rel="stylesheet" href="/plugin/x-admin/css/font.css">
-    <link rel="stylesheet" href="/plugin/x-admin/css/xadmin.css">
-    <script type="text/javascript" src="/plugin/layui/layui.all.js"></script>
-    <script type="text/javascript" src="/plugin/jquery/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="static/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="static/x-admin/css/font.css">
+    <link rel="stylesheet" href="static/x-admin/css/xadmin.css">
+    <script type="text/javascript" src="static/layui/layui.all.js"></script>
+    <script type="text/javascript" src="static/jquery/jquery-3.2.1.min.js"></script>
 
 </head>
 <body class="login-bg">
@@ -51,7 +51,7 @@
   var layer;
   $(function  () {
     layui.use(['form','layer'], function(){
-      var form = layui.form;
+      <-- var form = layui.form;
       form.verify({
         username:function(v){
           if(v.trim()==''){
@@ -67,7 +67,7 @@
                   return '验证码不能为空';
               }
           }
-      });
+      });-->
 
       form.render();
     });
