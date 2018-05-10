@@ -1,0 +1,5 @@
+com\mi\entity\User.class
+com\mi\TestController.class
+com\mi\mapper\UserMapper.class
+com\mi\service\UserService.class
+com\mi\App.class
