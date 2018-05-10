@@ -1,0 +1,2 @@
+# mutilmodulespringboot
+基于maven构建的多模块的Spring boot项目
